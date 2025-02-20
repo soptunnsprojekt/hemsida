@@ -5,12 +5,12 @@
 }
 
 body {
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
     color: white;
     background-color: black;
     overflow-x: hidden;
@@ -72,3 +72,38 @@ body {
 }
 
 /*=========================*/
+
+.main {
+    margin-top: 50px;
+}
+
+.section {
+    position: relative; 
+    width: 100%;
+    height: 800px;
+    background: url('https://www.grainmillers.com/wp-content/uploads/2018/12/cornfield-at-sunset-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    z-index: 0;
+}
+
+.section-div1 {
+    background-color: white; 
+    width: 30%;
+    height: 100%;  
+    z-index: 2
+}
+
+
+
+
+.section-div2 {
+    width: 40%;
+    height: 100%;  
+    z-index: 1;    
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));    
+}
+
