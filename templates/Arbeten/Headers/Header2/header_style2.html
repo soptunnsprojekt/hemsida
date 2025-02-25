@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header_style2</title>
+    <link rel="stylesheet" href="styles/header_style2.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="header-nav">
+            <ul>
+                <li class="menu-button" onclick=showSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#FF4500"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                <li><a class="header-underline" href="#">Home</a></li>
+                <li><a class="header-underline hideOnMobile" href="#">About Us</a></li>
+                <li><a class="header-underline hideOnMobile" href="#">Products</a></li>
+                <li><a class="header-underline hideOnMobile" href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside>
+        <nav class="sidebar-nav">
+            <ul>
+                <li class="x-button" onclick=hideSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#00FFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a class="sidebar-underline" href="#">Home</a></li>
+                <li><a class="sidebar-underline" href="#">About Us</a></li>
+                <li><a class="sidebar-underline" href="#">Products</a></li>
+                <li><a class="sidebar-underline" href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <section class="hero">
+        <div class="hero-grayscale ctn">
+            <h1>
+                Your Slogan
+            </h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur architecto error ratione
+            </p>
+            <a href="#">Learn More</a>
+        </div>
+    </section>
+
+    <main class="main">
+
+    </main>
+
+    <aside class="aside">
+
+    </aside>
+
+    <footer class="footer">
+
+    </footer>
+
+    <script>
+        function showSidebar(event){
+            event.preventDefault();
+            const sidebar = document.querySelector('.sidebar-nav')
+            sidebar.style.display = 'flex'
+        }
+
+        function hideSidebar(event){
+            event.preventDefault();
+            const sidebar = document.querySelector('.sidebar-nav')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

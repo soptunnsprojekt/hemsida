@@ -1,0 +1,5 @@
+Fixa sidebar att när man klickar på sidebar ska den inte hamna högst upp på sidan. Istället ska man stanna där man är, fast den fälls ut: KLAR/EJ KLAR :: EJ KLAR
+
+Gör klart <section> 
+
+Tänk ut design för main och section samt fler osv

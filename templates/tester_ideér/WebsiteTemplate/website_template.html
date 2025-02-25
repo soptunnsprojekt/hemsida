@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet" href="styles/website_template.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="header-nav">
+            <ul class="sidebar">
+                <li onclick=hideSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="#">About Us</a></li>
+                <li class="hideOnMobile"><a href="#">Products</a></li>
+                <li class="hideOnMobile"><a href="#">Contact Us</a></li>
+                <li class="menu-button" onclick=showSidebar(event)><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="background-img">
+        <div class="hero ctn">
+            <h1>
+                Your Slogan
+                <h2 class="line"></h2>
+            </h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur architecto error ratione
+            </p>
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="section-card ctn">
+            <h1>
+                Example Text
+            </h1>
+            <h4 class="line"></h4>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima consectetur voluptates sit, quos ea voluptate magnam adipisci dignissimos porro ab ipsum necessitatibus optio molestias explicabo.
+            </p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="section-card section-img">
+            <img src="lake.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="section-card section-img">
+            <img src="lake.jpg" alt="">
+        </div>
+        <div class="section-card ctn">
+            <h1>
+                Example Text
+            </h1>
+            <h4 class="line"></h4>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima consectetur voluptates sit, quos ea voluptate magnam adipisci dignissimos porro ab ipsum necessitatibus optio molestias explicabo.
+            </p>
+            <a href="#">Learn More</a>
+        </div>
+    </section>
+
+    
+    <div class="main"> 
+        <aside class="left">
+            LEFT
+        </aside>
+        <main>
+            <h1>
+                MAIN CONTENT
+            </h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada arcu sed consectetur semper. Duis sed ex magna. Vivamus nibh erat, dapibus vitae vulputate non, finibus at augue. Sed sodales, nisi nec suscipit tristique, lorem mi mollis velit, et fringilla enim odio nec sapien. Nullam eget quam enim. Nulla gravida augue mi, eu vehicula dui posuere nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada arcu sed consectetur semper. Duis sed ex magna. Vivamus nibh erat, dapibus vitae vulputate non, finibus at augue. Sed sodales, nisi nec suscipit tristique, lorem mi mollis velit, et fringilla enim odio nec sapien. Nullam eget quam enim. Nulla gravida augue mi, eu vehicula dui posuere nec. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+            </p>
+        </main>
+        <aside class="right">
+            RIGHT
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-column">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>online shop</h4>
+                    <ul>
+                        <li><a href="#">watch</a></li>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">shoes</a></li>
+                        <li><a href="#">dress</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>follow us</h4>
+                    <div class="footer-social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </footer>
+    
+    <script>
+        function showSidebar(event){
+            event.preventDefault();
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+
+        function hideSidebar(event){
+            event.preventDefault();
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Click Right</title>
+    <link rel="stylesheet" href="styles/sidebar3.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="dropdown-sidebar">
+                <a href="#">Products <span class="arrow">&#x25B6;</span></a>
+                <ul class="submenu">
+                    <li class="dropdown-sidebar_two">
+                        <a href="#">Submenu 1 <span class="arrow">&#x25B6;</span></a>
+                        <ul class="submenu">
+                            <li><a href="#">Submenu A</a></li>
+                            <li><a href="#">Submenu B</a></li>
+                            <li><a href="#">Submenu C</a></li>
+                            <li><a href="#">Submenu D</a></li>
+                            <li><a href="#">Submenu E</a></li>
+                            <li><a href="#">Submenu F</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-sidebar_two">
+                        <a href="#">Submenu 2 <span class="arrow">&#x25B6;</span></a>
+                        <ul class="submenu">
+                            <li><a href="#">Submenu A</a></li>
+                            <li><a href="#">Submenu B</a></li>
+                            <li><a href="#">Submenu C</a></li>
+                            <li><a href="#">Submenu D</a></li>
+                            <li><a href="#">Submenu E</a></li>
+                            <li><a href="#">Submenu F</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-sidebar_two">
+                        <a href="#">Submenu 3 <span class="arrow">&#x25B6;</span></a>
+                        <ul class="submenu">
+                            <li><a href="#">Submenu A</a></li>
+                            <li><a href="#">Submenu B</a></li>
+                            <li><a href="#">Submenu C</a></li>
+                            <li><a href="#">Submenu D</a></li>
+                            <li><a href="#">Submenu E</a></li>
+                            <li><a href="#">Submenu F</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-sidebar_two">
+                        <a href="#">Submenu 4 <span class="arrow">&#x25B6;</span></a>
+                        <ul class="submenu">
+                            <li><a href="#">Submenu A</a></li>
+                            <li><a href="#">Submenu B</a></li>
+                            <li><a href="#">Submenu C</a></li>
+                            <li><a href="#">Submenu D</a></li>
+                            <li><a href="#">Submenu E</a></li>
+                            <li><a href="#">Submenu F</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        // Handle click event for first-level dropdowns
+        document.querySelectorAll('.dropdown-sidebar > a').forEach(dropdown => {
+            dropdown.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Toggle the active class on the parent li
+                const parentLi = this.parentElement;
+                parentLi.classList.toggle('active');
+
+                // Toggle the arrow-down class on the arrow span
+                const arrow = this.querySelector('.arrow');
+                if (parentLi.classList.contains('active')) {
+                    arrow.innerHTML = '&#x25BC;'; // Down arrow
+                } else {
+                    arrow.innerHTML = '&#x25B6;'; // Right arrow
+                }
+
+                // Close other open first-level submenus and reset their arrows
+                document.querySelectorAll('.dropdown-sidebar.active').forEach(activeLi => {
+                    if (activeLi !== parentLi) {
+                        activeLi.classList.remove('active');
+                        activeLi.querySelector('.arrow').innerHTML = '&#x25B6;'; // Right arrow
+                    }
+                });
+            });
+        });
+
+        // Handle click event for second-level dropdowns
+        document.querySelectorAll('.dropdown-sidebar_two > a').forEach(dropdown => {
+            dropdown.addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Toggle the active class on the parent li
+                const parentLi = this.parentElement;
+                parentLi.classList.toggle('active');
+
+                // Toggle the arrow-down class on the arrow span
+                const arrow = this.querySelector('.arrow');
+                if (parentLi.classList.contains('active')) {
+                    arrow.innerHTML = '&#x25BC;'; // Down arrow
+                } else {
+                    arrow.innerHTML = '&#x25B6;'; // Right arrow
+                }
+
+                // Close other open second-level submenus and reset their arrows
+                document.querySelectorAll('.dropdown-sidebar_two.active').forEach(activeLi => {
+                    if (activeLi !== parentLi) {
+                        activeLi.classList.remove('active');
+                        activeLi.querySelector('.arrow').innerHTML = '&#x25B6;'; // Right arrow
+                    }
+                });
+            });
+        });
+
+        // Close all dropdowns if clicked outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('nav')) {
+                document.querySelectorAll('.dropdown-sidebar.active').forEach(activeLi => {
+                    activeLi.classList.remove('active');
+                    activeLi.querySelector('.arrow').innerHTML = '&#x25B6;'; // Right arrow
+                });
+                document.querySelectorAll('.dropdown-sidebar_two.active').forEach(activeLi => {
+                    activeLi.classList.remove('active');
+                    activeLi.querySelector('.arrow').innerHTML = '&#x25B6;'; // Right arrow
+                });
+            }
+        });
+    </script>
+</body>
+</html>

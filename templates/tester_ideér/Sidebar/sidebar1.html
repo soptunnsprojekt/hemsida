@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Hover Right</title>
+    <link rel="stylesheet" href="styles/sidebar1.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="dropdown-sidebar">
+                <a href="#">Products <span class="arrow">&#x25B6;</span></a>
+                <ul>
+                    <li class="dropdown-sidebar_two">
+                        <a href="#">Submenu 1 <span class="arrow">&#x25B6;</span></a>
+                        <ul>
+                            <li><a href="#">Submenu A</a></li>
+                            <li><a href="#">Submenu B</a></li>
+                            <li><a href="#">Submenu C</a></li>
+                            <li><a href="#">Submenu D</a></li>
+                            <li><a href="#">Submenu E</a></li>
+                            <li><a href="#">Submenu F</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-sidebar_two">
+                        <a href="#">Submenu 2 <span class="arrow">&#x25B6;</span></a>
+                        <ul>
+                            <li><a href="#">Submenu A</a></li>
+                            <li><a href="#">Submenu B</a></li>
+                            <li><a href="#">Submenu C</a></li>
+                            <li><a href="#">Submenu D</a></li>
+                            <li><a href="#">Submenu E</a></li>
+                            <li><a href="#">Submenu F</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-sidebar_two">
+                        <a href="#">Submenu 3 <span class="arrow">&#x25B6;</span></a>
+                        <ul>
+                            <li><a href="#">Submenu A</a></li>
+                            <li><a href="#">Submenu B</a></li>
+                            <li><a href="#">Submenu C</a></li>
+                            <li><a href="#">Submenu D</a></li>
+                            <li><a href="#">Submenu E</a></li>
+                            <li><a href="#">Submenu F</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-sidebar_two">
+                        <a href="#">Submenu 4<span class="arrow">&#x25B6;</span></a>
+                        <ul>
+                            <li><a href="#">Submenu A</a></li>
+                            <li><a href="#">Submenu B</a></li>
+                            <li><a href="#">Submenu C</a></li>
+                            <li><a href="#">Submenu D</a></li>
+                            <li><a href="#">Submenu E</a></li>
+                            <li><a href="#">Submenu F</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <script>
+        // JavaScript to toggle dropdown on click
+        document.querySelectorAll('.dropdown-sidebar > a, .dropdown-sidebar_two > a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                let parentLi = this.parentElement;
+                parentLi.classList.toggle('clicked');
+            });
+        });
+    </script>
+</body>
+</html>
